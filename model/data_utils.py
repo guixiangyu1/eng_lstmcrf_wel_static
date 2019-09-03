@@ -401,6 +401,7 @@ def get_chunks(seq, tags):
     chunks = []
     chunk_type, chunk_start = None, None
     for i, tok in enumerate(seq):
+        tok = idx_to_tag(tok)
         if tok == default:
             chunk_type, chunk_start = None, None
         if tok == 'Fusion':
